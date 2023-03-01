@@ -1,4 +1,4 @@
-#TRANSCENDANCE
+#  TRANSCENDANCE
 
 1st container : PostgreSQL docker image
 2nd container: a node docker image for the backend
@@ -11,12 +11,12 @@ Install the nest CLI globally
 ```
 npm install -g @nestjs/cli
 ```
-##BACKEND
+## BACKEND
 
 ```
 nest new backend && cd backend
 ```
-###Interfacing with the Database: Prisma
+### Interfacing with the Database: Prisma
 
 Prisma generates SQL tables for `.prisma` files
 Install prisma as dev tool. Once the tables are generated, you won't need it.
@@ -56,7 +56,7 @@ Edit: Actually one one side you need to generate the SQL_TABLE and optionnally r
 but you also need to generate the prisma clien with prisma generate
 Clarify later
 
-### Creating modules and their services
+###  Creating modules and their services
 
 We're going to need modules for :
 - [Authentication](https://docs.nestjs.com/security/authentication#authentication)
@@ -72,7 +72,7 @@ other services:
 ```
 nest g service prisma-client-service
 ```
-### Implement authenntication with the 42 api
+###  Implement authenntication with the 42 api
 
 [42 API docs](https://api.intra.42.fr/apidoc)
 [NestJs Authentication](https://docs.nestjs.com/security/authentication#authentication)
@@ -89,10 +89,10 @@ Use the `--flat` option when you don't want to generate a directory for the serv
 
 Also if you're gonna use the UsersService in the auth Module, you'd better export it at the in the user module.
 
-### Install Axios
+###  Install Axios
 Nest's HttpModule is a wrapper around the axios library. Install both the wrapper and the library
 ```
 npm i --save @nestjs/axios axios
 ```
 
-## FRONTEND
+##  FRONTEND
