@@ -89,10 +89,24 @@ Use the `--flat` option when you don't want to generate a directory for the serv
 
 Also if you're gonna use the UsersService in the auth Module, you'd better export it at the in the user module.
 
-###  Install Axios
+###  Install Axios (Not needed actually)
+
+Nest wraps a http *server* but in order to send http requests (be a client) it needs the HttpModule
 Nest's HttpModule is a wrapper around the axios library. Install both the wrapper and the library
 ```
 npm i --save @nestjs/axios axios
+```
+
+### Websockets
+
+To use websockets with nestjs you need a `@WebSocketGateway` provider. Although they are providers (they can provide data), gateways are like controllers
+in the sense that its functions are the entrypoint to handle client messages like controllers are the entrypoint for https requests.
+
+To handle websockets, Nest supports the `socket.io` and `ws` websocket libraries.
+
+Let's install the dependancies
+```
+npm i --save @nestjs/websockets @nestjs/platform-socket.io
 ```
 
 ##  FRONTEND
